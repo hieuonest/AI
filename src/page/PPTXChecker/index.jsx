@@ -113,7 +113,7 @@ const mockAudioErrors = [
     key: 1,
     slide: 2,
     type: "Khoảng lặng",
-    detail: "Phát hiện khoảng lặng 6.3s tại 00:00:14",
+    detail: "Phát hiện khoảng lặng 6.3s tại 00:00:14.",
     suggestion:
       "Cắt đoạn lặng từ 00:00:14 đến 00:00:20 bằng Audacity: chọn vùng → Delete. Cho phép lặng tối đa 2s.",
     severity: "warning",
