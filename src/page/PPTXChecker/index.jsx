@@ -49,8 +49,8 @@ const mockSlideErrors = [
     slide: 2,
     type: "Thiếu",
     detail: "Thiếu tên môn học",
-    suggestion:
-      "Sửa thành 'quản lý' — đây là cách viết chuẩn theo từ điển tiếng Việt hiện hành.",
+    // suggestion:
+    //   "Sửa thành 'quản lý' — đây là cách viết chuẩn theo từ điển tiếng Việt hiện hành.",
     severity: "warning",
   },
   {
@@ -58,8 +58,8 @@ const mockSlideErrors = [
     slide: 7,
     type: "Thiếu",
     detail: "Thiếu tên môn học",
-    suggestion:
-      "Sửa lại thành 'phương pháp'. Kiểm tra kỹ phần gõ tắt trên bàn phím.",
+    // suggestion:
+    //   "Sửa lại thành 'phương pháp'. Kiểm tra kỹ phần gõ tắt trên bàn phím.",
     severity: "warning",
   },
   {
@@ -67,8 +67,8 @@ const mockSlideErrors = [
     slide: 17,
     type: "Thiếu",
     detail: "Thiếu tên môn học",
-    suggestion:
-      "Thêm tên môn học vào Footer: Insert → Header & Footer → đánh tên môn → Apply to All.",
+    // suggestion:
+    //   "Thêm tên môn học vào Footer: Insert → Header & Footer → đánh tên môn → Apply to All.",
     severity: "warning",
   },
   {
@@ -76,25 +76,25 @@ const mockSlideErrors = [
     slide: 3,
     type: "Sai chính tả",
     detail: "Sai chính tả từ 'Thị trưng'",
-    suggestion:
-      "Dùng Slide Master (View → Slide Master) để áp dụng footer đồng nhất cho tất cả slide.",
-    severity: "error",
+    // suggestion:
+    //   "Dùng Slide Master (View → Slide Master) để áp dụng footer đồng nhất cho tất cả slide.",
+    severity: "warning",
   },
   {
     key: 5,
     slide: 26,
     type: "Sai chính tả",
     detail: "Sai chính tả từ 'địa lí'",
-    suggestion:
-      "Sửa thành 'Chương 1: Tổng quan'. Viết hoa chữ cái đầu tiêu đề.",
-    severity: "error",
+    // suggestion:
+    //   "Sửa thành 'Chương 1: Tổng quan'. Viết hoa chữ cái đầu tiêu đề.",
+    severity: "warning",
   },
   {
     key: 6,
     slide: 6,
     type: "Mục bài không viết hoa",
     detail: "Tiêu đề 'phần ii. nội dung' chưa viết hoa chữ đầu",
-    suggestion: "Sửa thành 'Phần II. Nội dung'. Dùng chữ in hoa cho số La Mã.",
+    // suggestion: "Sửa thành 'Phần II. Nội dung'. Dùng chữ in hoa cho số La Mã.",
     severity: "warning",
   },
 ];
@@ -420,7 +420,7 @@ async function exportWordReport(fileName, slideErrors, audioErrors, simData) {
             hCell("Loai loi", 1500, headerColor),
             hCell("Mo ta loi", 2700, headerColor),
             hCell("Muc do", 1300, headerColor),
-            hCell("Goi y chinh sua", 3060, headerColor),
+            // hCell("Goi y chinh sua", 3060, headerColor),
           ],
         }),
         ...errors.map(
@@ -435,7 +435,7 @@ async function exportWordReport(fileName, slideErrors, audioErrors, simData) {
                 dCell(e.type, 1500, i % 2 === 0 ? "F8FAFF" : "FFFFFF"),
                 dCell(e.detail, 2700, i % 2 === 0 ? "F8FAFF" : "FFFFFF"),
                 sevCell(e.severity, 1300),
-                tipCell(e.suggestion, 3060),
+                // tipCell(e.suggestion, 3060),
               ],
             }),
         ),
