@@ -46,65 +46,56 @@ const { Dragger } = Upload;
 const mockSlideErrors = [
   {
     key: 1,
-    slide: 3,
-    type: "Sai chính tả",
-    detail: "Từ 'quản lý' bị viết thành 'quản lí'",
+    slide: 2,
+    type: "Thiếu",
+    detail: "Thiếu tên môn học",
     suggestion:
       "Sửa thành 'quản lý' — đây là cách viết chuẩn theo từ điển tiếng Việt hiện hành.",
     severity: "warning",
   },
   {
     key: 2,
-    slide: 5,
-    type: "Sai chính tả",
-    detail: "Từ 'phương pháp' bị viết thành 'phương páp'",
+    slide: 7,
+    type: "Thiếu",
+    detail: "Thiếu tên môn học",
     suggestion:
       "Sửa lại thành 'phương pháp'. Kiểm tra kỹ phần gõ tắt trên bàn phím.",
-    severity: "error",
+    severity: "warning",
   },
   {
     key: 3,
-    slide: 7,
-    type: "Thiếu footer",
-    detail: "Slide không có tên môn học ở chân trang",
+    slide: 17,
+    type: "Thiếu",
+    detail: "Thiếu tên môn học",
     suggestion:
       "Thêm tên môn học vào Footer: Insert → Header & Footer → đánh tên môn → Apply to All.",
-    severity: "error",
+    severity: "warning",
   },
   {
     key: 4,
-    slide: 9,
-    type: "Thiếu footer",
-    detail: "Slide không có tên môn học ở chân trang",
+    slide: 3,
+    type: "Sai chính tả",
+    detail: "Sai chính tả từ 'Thị trưng'",
     suggestion:
       "Dùng Slide Master (View → Slide Master) để áp dụng footer đồng nhất cho tất cả slide.",
     severity: "error",
   },
   {
     key: 5,
-    slide: 2,
-    type: "Mục bài không viết hoa",
-    detail: "Tiêu đề 'chương 1: tổng quan' chưa viết hoa chữ đầu",
+    slide: 26,
+    type: "Sai chính tả",
+    detail: "Sai chính tả từ 'địa lí'",
     suggestion:
       "Sửa thành 'Chương 1: Tổng quan'. Viết hoa chữ cái đầu tiêu đề.",
-    severity: "warning",
+    severity: "error",
   },
   {
     key: 6,
-    slide: 4,
+    slide: 6,
     type: "Mục bài không viết hoa",
     detail: "Tiêu đề 'phần ii. nội dung' chưa viết hoa chữ đầu",
     suggestion: "Sửa thành 'Phần II. Nội dung'. Dùng chữ in hoa cho số La Mã.",
     severity: "warning",
-  },
-  {
-    key: 7,
-    slide: 11,
-    type: "Sai chính tả",
-    detail: "Từ 'nghiên cứu' bị viết thành 'nghiên cứụ'",
-    suggestion:
-      "Sửa lại thành 'nghiên cứu'. Lỗi do nhập dấu thanh điệu thừa ở cuối từ.",
-    severity: "error",
   },
 ];
 
@@ -852,16 +843,16 @@ export default function Home() {
       ),
     },
     { title: "Mô tả lỗi", dataIndex: "detail", ellipsis: true },
-    {
-      title: "Gợi ý sửa",
-      dataIndex: "suggestion",
-      ellipsis: true,
-      render: (v) => (
-        <Text type="secondary" style={{ fontSize: 12 }}>
-          {v}
-        </Text>
-      ),
-    },
+    // {
+    //   title: "Gợi ý sửa",
+    //   dataIndex: "suggestion",
+    //   ellipsis: true,
+    //   render: (v) => (
+    //     <Text type="secondary" style={{ fontSize: 12 }}>
+    //       {v}
+    //     </Text>
+    //   ),
+    // },
     {
       title: "",
       dataIndex: "severity",
@@ -972,8 +963,8 @@ export default function Home() {
                 color: "#ff4d4f",
               },
               {
-                label: "Thiếu footer",
-                count: mockSlideErrors.filter((e) => e.type === "Thiếu footer")
+                label: "Thiếu",
+                count: mockSlideErrors.filter((e) => e.type === "Thiếu")
                   .length,
                 color: "#fa8c16",
               },
